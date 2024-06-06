@@ -15,18 +15,22 @@ const Header = () => {
             <span class="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="navbarSupportedContent">
-            <Nav class="ms-auto flex">
-              <LinkContainer to='cart'> 
+            <Nav class="ms-auto d-flex flex-row">
+
+              <LinkContainer to='/cart'> 
               <Nav.Link className="px-2" >
                 <i className="fas fa-shopping-cart"></i>
                 Cart
               </Nav.Link>
               </LinkContainer>
+
               <LinkContainer to="/login">
-              <Nav.Link className="fas fa-user" >
+              <Nav.Link className="" >
+                <i className="fas fa-user"> </i>
                 Sign In
               </Nav.Link>
               </LinkContainer>
+
             </Nav>
           </Navbar.Collapse>
         </Container>
