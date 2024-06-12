@@ -13,7 +13,7 @@ const Rating = ({ value, text, color }) => {
                 ? "fas fa-star"
                 : value >= 0.5
                 ? "fas fa-star-helf-alt"
-                : "far fa-star"
+                : "fa-regular fa-star"
             }
           ></i>
         </span>
@@ -25,7 +25,7 @@ const Rating = ({ value, text, color }) => {
                 ? "fas fa-star"
                 : value >= 1.5
                 ? "fas fa-star-helf-alt"
-                : "far fa-star"
+                : "fa-regular fa-star"
             }
           ></i>
         </span>
@@ -37,7 +37,7 @@ const Rating = ({ value, text, color }) => {
                 ? "fas fa-star"
                 : value >= 2.5
                 ? "fas fa-star-helf-alt"
-                : "far fa-star"
+                : "fa-regular fa-star"
             }
           ></i>
         </span>
@@ -49,7 +49,7 @@ const Rating = ({ value, text, color }) => {
                 ? "fas fa-star"
                 : value >= 3.5
                 ? "fas fa-star-helf-alt"
-                : "far fa-star"
+                : "fa-regular fa-star"
             }
           ></i>
         </span>

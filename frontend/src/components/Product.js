@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card, CardBody } from "react-bootstrap";
-import {Link} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import Rating from "./Rating";
+ const Product = ({product}) => {
 
- const Product = ({ product }) => {
-  return (
+
+
+  return <>
     <Card className="my-3 p-3 rounded">
       <Link to={`/product/${product._id}`}>
         <Card.Img src={product.image} variant="top" />
@@ -24,7 +26,8 @@ import Rating from "./Rating";
 
       </CardBody>
     </Card>
-  );
-};
+  
+  </>
+ }
 
 export default Product;
