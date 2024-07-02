@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import Rating from "../components/Rating";
 import axios from "axios";
+import CheckOutPage from "./CheckOutPage";
 // import products from "../products";
 
 const ProductScreen = () => {
@@ -11,13 +12,14 @@ const ProductScreen = () => {
   // // console.log(product)
   const [product, setProduct] = useState({});
   const { id } = useParams();
-  console.log(id)
-  console.log(product)
+  // fetching id from url 
+  console.log(id);
+  console.log(product);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const { data } = await axios.get(`/api/product/${id}`);
+        const { data } = await axios.get(`/api/products/${id}`);
         setProduct(data);
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -77,6 +79,9 @@ const ProductScreen = () => {
                   className=" w-100 btn btn-block"
                   type="button"
                   disabled={product.countInStock === 0}
+                  onClick={() => {
+                    <CheckOutPage />
+                  }}
                 >
                   Add To Cart
                 </Button>
